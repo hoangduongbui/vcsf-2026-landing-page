@@ -1,0 +1,29 @@
+// Site switches — the equivalents of the design reference's editor props.
+
+/** 'auto' = live between LIVE.start and LIVE.end; 'on' / 'off' force it. */
+export const LIVE_MODE: 'auto' | 'on' | 'off' = 'auto'
+
+/** YouTube URL or id of the live stream. Empty = "coming soon" placeholder. */
+export const LIVE_URL = ''
+
+/** 'full' | 'subtle' | 'off'. prefers-reduced-motion always forces 'off'. */
+export const MOTION: 'full' | 'subtle' | 'off' = 'full'
+
+/** Auto-advance the history timeline every 5 s. */
+export const HISTORY_AUTOPLAY = true
+
+/** Countdown target (start of event day, Hanoi time). */
+export const EVENT_START = '2026-10-05T00:00:00+07:00'
+
+/** The hero shows the countdown / "today" pill until this moment. */
+export const COUNTDOWN_HIDE_AFTER = '2026-10-08T00:00:00+07:00'
+
+/** After this moment the pill reads "event has ended". */
+export const EVENT_END = '2026-10-05T19:00:00+07:00'
+
+/** Menu background (preloaded by the header so opening the menu doesn't stall). */
+export const MENU_BG = '/images/KV-VCSF-2026-02.jpg'
+
+/** Section ids in page order — numbered 01–06 in the nav. */
+export const SECTIONS = ['history', 'about', 'speakers', 'agenda', 'library', 'partners'] as const
+export type SectionId = (typeof SECTIONS)[number]

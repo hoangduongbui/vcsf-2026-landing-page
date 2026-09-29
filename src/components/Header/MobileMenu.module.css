@@ -1,0 +1,133 @@
+/*
+ * Open/close are CSS transitions toggled by `.open` (set one frame after
+ * mount), so the start state is always painted before anything moves.
+ * Only opacity/transform animate, on their own compositor layers.
+ */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  background: var(--blue-600);
+  color: #fff;
+  overflow: auto;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity .42s cubic-bezier(.4, 0, .2, 1);
+}
+
+.open {
+  opacity: 1;
+  transition: opacity .55s cubic-bezier(.22, 1, .36, 1);
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: .45;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 60%);
+  mask-image: linear-gradient(180deg, transparent, #000 60%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  width: var(--container);
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.kicker {
+  font: 700 12px/1 var(--font-body);
+  letter-spacing: .2em;
+  color: var(--aqua);
+}
+
+.controls {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang {
+  backdrop-filter: none;
+}
+
+.close {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  background: #fff;
+  color: var(--navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  margin-top: clamp(24px, 5vh, 60px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  column-gap: 48px;
+}
+
+/* Items: closed state (also the closing transition — quick, no stagger) */
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .25s ease-in, transform .3s ease-in, padding .3s, color .3s;
+}
+
+/* Opening: staggered, long soft ease-out */
+.open .item {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity .7s cubic-bezier(.22, 1, .36, 1) calc(90ms + var(--i, 0) * 55ms),
+    transform .8s cubic-bezier(.22, 1, .36, 1) calc(90ms + var(--i, 0) * 55ms),
+    padding .3s,
+    color .3s;
+}
+
+.item:hover {
+  padding-left: 12px;
+  color: var(--mint-soft);
+}
+
+.num {
+  font: 800 13px/1 var(--font-head);
+  color: var(--aqua);
+}
+
+.label {
+  font: 800 clamp(26px, 3.2vw, 42px)/1.1 var(--font-head);
+  letter-spacing: -.02em;
+}
+
+html[data-motion='off'] .menu,
+html[data-motion='off'] .item {
+  transition: none;
+}

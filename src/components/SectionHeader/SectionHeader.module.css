@@ -1,0 +1,45 @@
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 700 12px/1 var(--font-body);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.rule {
+  width: 56px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.title {
+  margin: 18px 0 0;
+  font: 800 clamp(34px, 4.4vw, 62px)/1.02 var(--font-head);
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+
+.kicker.light {
+  color: var(--royal);
+}
+
+.light .rule {
+  background: linear-gradient(90deg, var(--sky), var(--aqua), var(--teal));
+}
+
+.title.light {
+  color: var(--navy-900);
+}
+
+.kicker.dark {
+  color: var(--aqua);
+}
+
+.dark .rule {
+  background: linear-gradient(90deg, var(--aqua), var(--leaf));
+}
+
+.title.dark {
+  color: #fff;
+}

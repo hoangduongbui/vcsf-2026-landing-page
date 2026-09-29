@@ -1,0 +1,322 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 0%, rgba(31, 162, 242, .45), transparent 45%),
+    radial-gradient(circle at 6% 60%, rgba(20, 201, 164, .2), transparent 36%),
+    var(--blue-600);
+  padding: clamp(56px, 6vw, 90px) 0 clamp(40px, 4vw, 64px);
+  color: #fff;
+}
+
+/* Sub-headings + pill links */
+.subHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.subNum {
+  font: 800 13px/1 var(--font-head);
+  letter-spacing: .08em;
+  color: var(--aqua);
+}
+
+.subTitle {
+  margin: 10px 0 0;
+  font: 800 clamp(26px, 2.6vw, 36px)/1.1 var(--font-head);
+  letter-spacing: -.02em;
+  color: #fff;
+}
+
+.pillLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 10px 0 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  color: #fff;
+  font: 700 15px/1 var(--font-head);
+  white-space: nowrap;
+  transition: background .3s;
+}
+
+.pillLink:hover {
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+}
+
+.pillIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 05.1 Photo strip — full-bleed, endless, draggable */
+.photos {
+  margin-top: clamp(40px, 5vw, 64px);
+}
+
+.stripViewport {
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  margin-top: 24px;
+  margin-left: calc((min(1320px, calc(100vw - 2 * var(--gutter))) - 100vw) / 2);
+  width: 100vw;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.strip {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  padding: 4px 0;
+}
+
+.tile {
+  position: relative;
+  flex: 0 0 auto;
+  height: clamp(200px, 22vw, 300px);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--royal);
+  box-shadow: 0 0 0 1px rgba(95, 224, 240, .25);
+  cursor: zoom-in;
+}
+
+.tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .9s var(--ease);
+}
+
+.tileShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 12, 122, .55));
+  opacity: 0;
+  transition: opacity .4s;
+  pointer-events: none;
+}
+
+.expand {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  background: #fff;
+  color: var(--navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .35s, transform .45s var(--ease);
+  box-shadow: 0 10px 30px rgba(0, 10, 90, .35);
+}
+
+.tile:hover img {
+  transform: scale(1.05);
+}
+
+.tile:hover .tileShade,
+.tile:hover .expand,
+.expand:focus-visible {
+  opacity: 1;
+}
+
+.tile:hover .expand,
+.expand:focus-visible {
+  transform: none;
+}
+
+/* Touch screens have no hover: keep the expand button visible */
+@media (hover: none) {
+  .tileShade,
+  .expand {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 05.2 Videos */
+.videos {
+  margin-top: clamp(56px, 6vw, 88px);
+}
+
+.videoBlock {
+  margin-top: 24px;
+}
+
+.player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--navy-800);
+  box-shadow: 0 40px 90px -30px rgba(0, 8, 80, .75), 0 0 0 1px rgba(95, 224, 240, .3);
+}
+
+.player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: 0;
+  background: var(--navy-800);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swap {
+  animation: vcSwap .7s var(--ease) both;
+}
+
+.poster img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.posterShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 12, 122, .1) 30%, rgba(0, 12, 122, .75) 100%);
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 84px;
+  height: 84px;
+  margin: -42px 0 0 -42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sky), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, .18), 0 20px 50px rgba(0, 10, 90, .5);
+  transition: transform .35s;
+}
+
+.play:hover {
+  transform: scale(1.08);
+}
+
+.soon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .92);
+  color: var(--navy-900);
+  font: 700 14px/1 var(--font-head);
+  white-space: nowrap;
+}
+
+.videoTabs {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 8px clamp(16px, 2.4vw, 32px);
+}
+
+.videoTab {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: left;
+  padding: 20px 4px 12px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #a9c6f7;
+  transition: color .4s;
+}
+
+.videoTab:hover,
+.videoTabActive {
+  color: #fff;
+}
+
+.videoBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, .18);
+  overflow: hidden;
+}
+
+.videoBar > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--aqua), var(--leaf));
+  transition: width .7s var(--ease);
+}
+
+.videoTabActive .videoBar > span {
+  width: 100%;
+}
+
+.videoIcon {
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, .1);
+  color: #9fc3f5;
+  transition: background .4s, color .4s;
+}
+
+.videoTabActive .videoIcon {
+  background: linear-gradient(135deg, var(--sky), var(--teal));
+  color: #fff;
+}
+
+.videoTitle {
+  padding-top: 9px;
+  font: 700 clamp(16px, 1.35vw, 19px)/1.35 var(--font-head);
+  text-wrap: pretty;
+}

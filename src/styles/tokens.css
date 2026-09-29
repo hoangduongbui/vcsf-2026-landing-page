@@ -1,0 +1,39 @@
+:root {
+  /* Navy / blue */
+  --navy-900: #041463;
+  --navy-800: #000c7a;
+  --navy-700: #040f85;
+  --blue-600: #0016b4;
+  --royal: #0a4fe6;
+  --sky: #1fa2f2;
+
+  /* Aqua / teal / leaf */
+  --aqua: #5fe0f0;
+  --aqua-100: #bdf6ff;
+  --teal: #14c9a4;
+  --leaf: #5cc83c;
+  --mint: #7cf0be;
+  --mint-soft: #9cf7d6;
+  --lime: #b6f28a;
+
+  /* Neutrals */
+  --ice: #f2fcff;
+  --ice-2: #e9faff;
+  --muted: #4a5f9a;
+  --muted-2: #3a4f8a;
+  --on-dark-muted: #c9deff;
+
+  /* Live / gold */
+  --live: #ff3b4e;
+  --live-deep: #d90429;
+  --live-dot: #ff4d5e;
+  --gold: #f2c14e;
+  --gold-2: #ffc857;
+
+  --font-head: Manrope, sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --gutter: clamp(20px, 4vw, 56px);
+  --container: min(1320px, calc(100% - 2 * var(--gutter)));
+}

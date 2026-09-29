@@ -1,0 +1,102 @@
+@import './tokens.css';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--ice);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--royal);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--teal);
+}
+
+::selection {
+  background: var(--aqua);
+  color: var(--navy-900);
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  font-family: var(--font-body);
+  color: var(--navy-900);
+  background: var(--ice);
+  overflow-x: clip;
+}
+
+/* Shared page width used by every section */
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+/* Light zone wrapping 01 History + 02 About */
+.zone-light {
+  position: relative;
+  background: linear-gradient(180deg, var(--ice) 0px, #fff 900px);
+}
+
+@keyframes vcFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes vcLiveW {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, .85); }
+  70% { box-shadow: 0 0 0 9px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+@keyframes vcLive {
+  0% { box-shadow: 0 0 0 0 rgba(255, 77, 94, .7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 77, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 77, 94, 0); }
+}
+
+@keyframes vcPop {
+  from { opacity: 0; transform: translateY(24px) scale(.96); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes vcSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Content swap (year, tab, section chip…): the reference's swap() */
+@keyframes vcSwap {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes vcFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14%); }
+}
+
+[data-float] {
+  animation: vcFloat 5.5s ease-in-out infinite;
+}
+
+html[data-motion='off'] [data-float] {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-float] {
+    animation: none;
+  }
+}

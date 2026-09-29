@@ -1,0 +1,26 @@
+.toggle {
+  display: flex;
+  gap: 4px;
+  height: 44px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .22);
+  backdrop-filter: blur(10px);
+}
+
+.toggle button {
+  border: 0;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0 14px;
+  font: 700 13px/1 var(--font-head);
+  background: transparent;
+  color: #fff;
+  transition: background .3s, color .3s;
+}
+
+.toggle button.active {
+  background: #fff;
+  color: var(--navy-900);
+}

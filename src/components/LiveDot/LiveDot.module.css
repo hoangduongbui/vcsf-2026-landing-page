@@ -1,0 +1,16 @@
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.red {
+  background: var(--live-dot);
+  animation: vcLive 1.6s ease-out infinite;
+}
+
+.white {
+  background: #fff;
+  animation: vcLiveW 1.4s ease-out infinite;
+}
