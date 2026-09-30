@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, type MouseEvent } from 'react'
 import { createPortal } from 'react-dom'
-import { HIDDEN_GROUPS, SHOW_DRAFT_BADGE, SP_GROUPS, SPEAKERS, speakerImage } from '../../data/speakers'
+import { HIDDEN_GROUPS, SHOW_AUTO_TAG, SP_GROUPS, SPEAKERS, speakerImage } from '../../data/speakers'
 import { useBodyLock } from '../../hooks/useBodyLock'
 import { getMotion } from '../../hooks/useMotion'
 import { useLocale, useT } from '../../i18n/context'
@@ -89,8 +89,7 @@ export default function SpeakerModal({ order, current, onNavigate, onClose }: Pr
 
   const sp = SPEAKERS[current]
   const txt = sp[locale]
-  const roleDraft = SHOW_DRAFT_BADGE && sp.draft.includes('chuc_danh_' + locale)
-  const bioDraft = SHOW_DRAFT_BADGE && sp.draft.includes('bio_' + locale)
+  const autoTag = SHOW_AUTO_TAG && (sp.draft.includes('chuc_danh_' + locale) || sp.draft.includes('bio_' + locale))
   const stop = (e: MouseEvent) => e.stopPropagation()
 
   const arrow = (dir: 1 | -1) => (
@@ -153,11 +152,6 @@ export default function SpeakerModal({ order, current, onNavigate, onClose }: Pr
             <h3 className={`${styles.name} ${HIDDEN_GROUPS.includes(sp.g) ? styles.nameFirst : ''}`}>{txt.name}</h3>
             <p className={styles.role}>
               {txt.role || <em>{t.spUpdating}</em>}
-              {roleDraft && (
-                <span className={styles.roleDraft}>
-                  <span className={styles.badge}>{t.spDraft}</span>
-                </span>
-              )}
             </p>
             <div className={styles.org}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#14C9A4" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -167,10 +161,19 @@ export default function SpeakerModal({ order, current, onNavigate, onClose }: Pr
             </div>
           </div>
           <div ref={scrollRef} className={styles.scroll}>
+            {autoTag && (
+              <div className={styles.autoRow}>
+                <span className={styles.autoTag}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 5h8M8 3v2M5.5 5c1 3.5 3.5 6 6.5 7.5M10.5 5c-1 3.5-3.5 6-6.5 7.5M13 21l4-9 4 9M14.5 18h5" />
+                  </svg>
+                  {t.spAuto}
+                </span>
+              </div>
+            )}
             <div className={styles.bioLabel}>
               <span>{t.speakerBio}</span>
               <span className={styles.bioRule} />
-              {bioDraft && <span className={styles.badge}>{t.spDraft}</span>}
             </div>
             {txt.bio.length === 0 && <p className={styles.noBio}>{t.spUpdating}</p>}
             <div className={styles.bio}>

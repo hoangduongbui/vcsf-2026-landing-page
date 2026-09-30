@@ -241,7 +241,8 @@ export default function Hero() {
             aria-hidden="true"
           />
         )}
-        {mobileKv && (
+        {/* Rings: tablet portrait only — hidden on phones */}
+        {portraitFit && (
           <div className={styles.iconsM} aria-hidden="true">
             {rings.map((k, i) => (
               <span key={i} className={styles.ringSlot} style={{ left: k.l, top: k.t, width: k.s, height: k.s }}>

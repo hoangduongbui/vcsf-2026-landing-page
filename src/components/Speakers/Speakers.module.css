@@ -155,18 +155,6 @@
   font: italic 500 13px/1 var(--font-body);
 }
 
-.draft {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 5px 9px;
-  border-radius: 6px;
-  background: #ffd43b;
-  color: #3d2e00;
-  font: 800 11px/1 var(--font-head);
-  letter-spacing: .08em;
-}
-
 .cardBody {
   display: flex;
   align-items: flex-start;

@@ -48,7 +48,7 @@ In `src/config.ts`, `LIVE_MODE = 'auto'` shows the live block on 05/10/2026 betw
 
 ### Before going live
 
-- Set `SHOW_DRAFT_BADGE = false` in `src/data/speakers.ts` to hide the yellow "NHÁP / DRAFT" tags.
+- A speaker's `draft` array marks auto-translated fields; the modal then shows the yellow "Tự động dịch / Auto-translated" tag. Set `SHOW_AUTO_TAG = false` in `src/data/speakers.ts` to hide it everywhere.
 - Pending from the client: real 2025 photos, the VCSF 2026 video id, one PDF link per document, a Facebook page URL, and confirmation of which Hemera logo file is which.
 
 ## Design reference

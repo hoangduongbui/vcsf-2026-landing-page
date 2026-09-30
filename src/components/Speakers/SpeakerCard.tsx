@@ -1,4 +1,4 @@
-import { HIDDEN_GROUPS, SHOW_DRAFT_BADGE, SP_GROUPS, speakerImage, type Speaker } from '../../data/speakers'
+import { HIDDEN_GROUPS, SP_GROUPS, speakerImage, type Speaker } from '../../data/speakers'
 import { useLocale, useT } from '../../i18n/context'
 import styles from './Speakers.module.css'
 
@@ -27,7 +27,6 @@ export default function SpeakerCard({ speaker: s, onOpen }: { speaker: Speaker; 
             <span>{t.spUpdating}</span>
           </span>
         )}
-        {SHOW_DRAFT_BADGE && s.draft.length > 0 && <span className={styles.draft}>{t.spDraft}</span>}
       </span>
       <span className={styles.cardBody}>
         <span className={styles.cardText}>
