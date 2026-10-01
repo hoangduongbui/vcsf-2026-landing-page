@@ -1,7 +1,7 @@
 # VCSF 2026 Landing — ngữ cảnh dự án
 
 Trang chủ song ngữ VI/EN cho **Diễn đàn Doanh nghiệp Phát triển Bền vững Việt Nam 2026** (VCSF 2026, Hà Nội, 05/10/2026).
-Dựng lại bằng **React 19 + Vite + TypeScript + CSS Modules** (không dùng UI library) từ bản design HTML của Claude Design.
+Dựng lại bằng **React 19 + Vite + TypeScript + CSS Modules** (không dùng UI library) từ bản design HTML của Codex Design.
 Chạy, build, deploy và bảng "sửa nội dung ở đâu": xem `README.md`.
 
 ## Cách làm việc với chủ dự án
@@ -66,4 +66,4 @@ Chạy, build, deploy và bảng "sửa nội dung ở đâu": xem `README.md`.
 ## Môi trường
 
 - Windows, Node 24. Python 3.13 cài ở máy nhà, máy khác có thể chưa có.
-- `.mcp.json` khai báo Playwright MCP để so trang với bản design. Cần chấp nhận server khi Claude Code hỏi thì mới tự chụp màn hình được.
+- `.mcp.json` khai báo Playwright MCP để so trang với bản design. Cần chấp nhận server khi Codex hỏi thì mới tự chụp màn hình được.

@@ -4,8 +4,8 @@ export type Locale = 'vi' | 'en'
 
 export const LIVE = {
   start: '2026-10-05T07:30:00+07:00', end: '2026-10-05T17:30:00+07:00',
-  vi: { badge: 'Đang phát trực tiếp', aria: 'Phát trực tiếp VCSF 2026', title: 'Theo dõi trực tiếp Diễn đàn VCSF 2026', desc: 'Toàn bộ phiên toàn thể và các phiên chuyên đề được phát trực tiếp trên kênh YouTube của VBCSD.', time: '8:00 – 17:00 · Thứ Hai, 05/10/2026', venue: 'Khách sạn Sheraton Hanoi West Lake, Hà Nội', open: 'Xem trên YouTube', cta: 'Xem trực tiếp sự kiện', soon: 'Luồng phát trực tiếp sẽ bắt đầu lúc 8:00' },
-  en: { badge: 'Live now', aria: 'VCSF 2026 live stream', title: 'Watch VCSF 2026 live', desc: 'The plenary and all breakout sessions are streamed live on the VBCSD YouTube channel.', time: '8:00 – 17:00 · Monday, 5 October 2026', venue: 'Sheraton Hanoi West Lake Hotel, Hanoi', open: 'Watch on YouTube', cta: 'Watch the event live', soon: 'The live stream starts at 8:00' },
+  vi: { badge: 'Đang phát trực tiếp', aria: 'Phát trực tiếp VCSF 2026', title: 'Theo dõi trực tiếp Diễn đàn VCSF 2026', desc: 'Toàn bộ phiên toàn thể và các phiên chuyên đề được phát trực tiếp trên kênh YouTube của VBCSD.', time: '7:45 – 16:00 · Thứ Hai, 05/10/2026', venue: 'Phòng Sông Hồng, Khách sạn Sheraton Hà Nội', open: 'Xem trên YouTube', cta: 'Xem trực tiếp sự kiện', soon: 'Luồng phát trực tiếp sẽ bắt đầu lúc 8:00' },
+  en: { badge: 'Live now', aria: 'VCSF 2026 live stream', title: 'Watch VCSF 2026 live', desc: 'The plenary and all breakout sessions are streamed live on the VBCSD YouTube channel.', time: '7:45 – 16:30 · Monday, 5 October 2026', venue: 'Hong River Ballroom, Sheraton Hanoi Hotel', open: 'Watch on YouTube', cta: 'Watch the event live', soon: 'The live stream starts at 8:00' },
 };
 
 /** Extract a YouTube video id from a URL or bare id. */
@@ -25,7 +25,7 @@ export const L = {
     aboutParagraphs: [
       'Được tổ chức thường niên từ năm 2014 bởi Liên đoàn Thương mại và Công nghiệp Việt Nam (VCCI) thông qua đầu mối là Hội đồng Doanh nghiệp vì sự phát triển bền vững Việt Nam (VBCSD), Diễn đàn Doanh nghiệp Phát triển Bền vững Việt Nam (VCSF) là sự kiện trao đổi, đối thoại hiệu quả giữa các cơ quan quản lý nhà nước, các tổ chức đối tác trong nước, quốc tế và cộng đồng doanh nghiệp về các định hướng và thực tiễn phát triển bền vững.',
       'Trải qua hơn 10 năm tổ chức, VCSF đã luôn nhận được sự quan tâm, đánh giá cao của lãnh đạo Đảng, Nhà nước, thu hút sự tham gia của đại diện các cơ quan, tổ chức trong nước và quốc tế cùng đông đảo cộng đồng doanh nghiệp. Các kỳ Diễn đàn VCSF đã đóng góp nhiều kiến nghị có giá trị, làm đầu vào cho các chính sách quan trọng về thúc đẩy phát triển bền vững doanh nghiệp đã được Chính phủ ban hành trong những năm qua.',
-      'Năm 2026, Diễn đàn VCSF với chủ đề “Tăng trưởng bứt phá – Phát triển bền vững: Hai mục tiêu, một hành trình” sẽ được tổ chức vào:\nThời gian: 8:00 – 17:00 ngày 05 tháng 10 năm 2026 (thứ Hai)\nĐịa điểm: Phòng Hội nghị Khách sạn Sheraton Tây Hồ, Hà Nội',
+      'Năm 2026, Diễn đàn VCSF với chủ đề “Tăng trưởng bứt phá – Phát triển bền vững: Hai mục tiêu, một hành trình” sẽ được tổ chức vào:\nThời gian: 7:45 – 16:00 ngày 05 tháng 10 năm 2026 (thứ Hai)\nĐịa điểm: Phòng Sông Hồng, Khách sạn Sheraton Hà Nội',
       '',
     ],
     aboutImageAlt: 'Minh họa ý niệm về không gian diễn đàn và kiến trúc bền vững', aboutImageNote: 'Hình minh họa ý niệm · VCSF 2026',
@@ -63,7 +63,7 @@ export const L = {
     aboutParagraphs: [
       'Held annually since 2014 by the Vietnam Chamber of Commerce and Industry (VCCI) through its focal point, the Vietnam Business Council for Sustainable Development (VBCSD), the Vietnam Corporate Sustainability Forum (VCSF) is an effective platform for exchange and dialogue between state management agencies, domestic and international partner organisations and the business community on sustainable development directions and practices.',
       'Over more than 10 years, VCSF has consistently received the attention and high appreciation of Party and State leaders, attracting representatives of domestic and international agencies and organisations as well as a large business community. Each edition of the Forum has contributed many valuable recommendations, serving as input for important policies promoting corporate sustainable development issued by the Government in recent years.',
-      'In 2026, the VCSF, themed “Accelerating growth – Advancing sustainability: Two goals, one shared journey”, will be held on:\nTime: 8:00 – 17:00, Monday, 5 October 2026\nVenue: Conference Hall, Sheraton Hanoi West Lake Hotel, Hanoi',
+      'In 2026, the VCSF, themed “Accelerating growth – Advancing sustainability: Two goals, one shared journey”, will be held on:\nTime: 7:45 – 16:30, Monday, 5 October 2026\nVenue: Hong River Ballroom, Sheraton Hanoi Hotel',
       'The Forum is expected to comprise a Plenary Session in the morning and breakout sessions in the afternoon, focusing on issues of major importance to Vietnam’s development in the new period, such as: promoting economic growth coupled with higher productivity; renewing the growth model and business models; fostering innovation and the green transition; and improving resource efficiency and business competitiveness.',
     ],
     aboutImageAlt: 'Conceptual illustration of a forum venue and sustainable architecture', aboutImageNote: 'Concept illustration · VCSF 2026',
