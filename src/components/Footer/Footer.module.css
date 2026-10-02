@@ -47,7 +47,7 @@
 }
 
 .logo {
-  height: 84px;
+  height: 104px;
   width: auto;
   display: block;
 }
@@ -72,11 +72,11 @@
   position: relative;
 }
 
-/* Desktop: social buttons (54px) sit on the logo's baseline (84px tall), so
+/* Desktop: social buttons (54px) sit on the logo's baseline (104px tall), so
    the contact rows below start level with the theme line (same 28px gap) */
 .side {
   flex: 1 1 360px;
-  padding-top: 30px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -182,6 +182,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .logo {
+    height: 92px;
   }
 
   .theme {
