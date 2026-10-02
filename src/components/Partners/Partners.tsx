@@ -1,3 +1,4 @@
+import { asset } from '../../config'
 import { PARTNERS } from '../../data/partners'
 import { useViewport } from '../../hooks/useViewport'
 import { useLocale, useT } from '../../i18n/context'
@@ -47,7 +48,7 @@ export default function Partners() {
               >
                 {tier.logos.map((lg) => (
                   <div key={lg.id} className={styles.logo} style={{ height: TIER.height[size][i], padding: TIER.pad[size][i] }}>
-                    <img src={`/images/partners/${lg.id}.png`} alt={lg[locale]} title={lg[locale]} loading="lazy" style={{ height: lg.hf }} />
+                    <img src={asset(`images/partners/${lg.id}.png`)} alt={lg[locale]} title={lg[locale]} loading="lazy" style={{ height: lg.hf }} />
                   </div>
                 ))}
               </div>

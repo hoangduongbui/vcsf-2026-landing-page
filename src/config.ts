@@ -21,8 +21,11 @@ export const COUNTDOWN_HIDE_AFTER = '2026-10-08T00:00:00+07:00'
 /** After this moment the pill reads "event has ended". */
 export const EVENT_END = '2026-10-05T19:00:00+07:00'
 
+/** URL of a file in public/, e.g. asset('images/logo.png'). Follows `base` in vite.config.ts. */
+export const asset = (path: string) => import.meta.env.BASE_URL + path
+
 /** Menu background (preloaded by the header so opening the menu doesn't stall). */
-export const MENU_BG = '/images/KV-VCSF-2026-02.jpg'
+export const MENU_BG = asset('images/KV-VCSF-2026-02.jpg')
 
 /** Section ids in page order — numbered 01–06 in the nav. */
 export const SECTIONS = ['history', 'about', 'speakers', 'agenda', 'library', 'partners'] as const

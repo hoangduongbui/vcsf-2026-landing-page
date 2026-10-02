@@ -1,3 +1,4 @@
+import { asset } from '../../config'
 import { LIVE } from '../../data/content'
 import { useLive } from '../../hooks/useLive'
 import { useLocale } from '../../i18n/context'
@@ -62,7 +63,7 @@ export default function LiveStream() {
               />
             ) : (
               <>
-                <img src="/images/KV-VCSF-2026-02.jpg" alt="" className={styles.poster} />
+                <img src={asset('images/KV-VCSF-2026-02.jpg')} alt="" className={styles.poster} />
                 <div className={styles.soon}>
                   <span className={styles.play}>
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff">

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import { asset } from '../../config'
 import { useViewport } from '../../hooks/useViewport'
 import { useLocale, useT } from '../../i18n/context'
 import SectionHeader from '../SectionHeader/SectionHeader'
@@ -66,7 +67,7 @@ export default function About() {
             ref={videoRef}
             className={styles.tree}
             style={{ width: wide ? '90%' : '100%', marginTop: wide ? '16%' : '12%' }}
-            src="/videos/vcsf-tree.mp4"
+            src={asset('videos/vcsf-tree.mp4')}
             autoPlay
             muted
             playsInline
@@ -100,7 +101,7 @@ export default function About() {
                   onBlur={() => setHot(-1)}
                 >
                   <span data-float="" className={styles.disc} style={{ animationDelay: -(i * 0.9).toFixed(1) + 's' }}>
-                    <img src={`/images/floating-icon-0${ic.icon}.png`} alt="" />
+                    <img src={asset(`images/floating-icon-0${ic.icon}.png`)} alt="" />
                   </span>
                   {on && (
                     <span role="tooltip" className={`${styles.pop} ${side}`}>

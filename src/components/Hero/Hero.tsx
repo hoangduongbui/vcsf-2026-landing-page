@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react'
-import { EVENT_END, EVENT_START } from '../../config'
+import { asset, EVENT_END, EVENT_START } from '../../config'
 import { LIVE } from '../../data/content'
 import { useLive } from '../../hooks/useLive'
 import { useMotion } from '../../hooks/useMotion'
@@ -27,7 +27,7 @@ interface Ring {
   d: number
 }
 
-const iconSrc = (n: number) => `/images/floating-icon-0${n}.png`
+const iconSrc = (n: number) => asset(`images/floating-icon-0${n}.png`)
 
 /**
  * Vertical object-position (%) of the portrait KV video. Higher = the frame
@@ -208,7 +208,7 @@ export default function Hero() {
     >
       <div ref={bgRef} className={styles.bg}>
         <img
-          src={narrow ? '/images/KV-VCSF-2026-02-mobile.jpg' : '/images/KV-VCSF-2026-02.jpg'}
+          src={asset(narrow ? 'images/KV-VCSF-2026-02-mobile.jpg' : 'images/KV-VCSF-2026-02.jpg')}
           alt=""
           className={`${styles.kvImg} ${zoomClass} ${portraitFit ? styles.kvImgPortrait : ''}`}
           style={{ objectPosition: narrow ? 'center 45%' : 'center bottom' }}
@@ -217,8 +217,8 @@ export default function Hero() {
           <video
             ref={heroVideoRef}
             className={styles.video}
-            src="/videos/kv-vcsf-2026-v2.mp4"
-            poster="/images/KV-VCSF-2026-02.jpg"
+            src={asset('videos/kv-vcsf-2026-v2.mp4')}
+            poster={asset('images/KV-VCSF-2026-02.jpg')}
             autoPlay
             muted
             loop
@@ -231,7 +231,7 @@ export default function Hero() {
           <video
             ref={heroVideoRef}
             className={styles.videoM}
-            src="/videos/kv-vcsf-2026-mobile-v3.mp4"
+            src={asset('videos/kv-vcsf-2026-mobile-v3.mp4')}
             style={{ objectPosition: `center ${portraitFit ? VIDEO_Y_PORTRAIT : VIDEO_Y_PHONE}%` }}
             autoPlay
             muted

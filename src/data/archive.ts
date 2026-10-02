@@ -1,8 +1,9 @@
 // Past editions, photo library and video library — from the design reference.
 
+import { asset } from '../config'
 import type { Locale } from './content'
 
-const I = '/images/'
+const I = asset('images/')
 
 export interface Year {
   year: string

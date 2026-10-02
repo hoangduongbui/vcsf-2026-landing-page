@@ -1,3 +1,4 @@
+import { asset } from '../../config'
 import { YOUTUBE_CHANNEL_URL } from '../../data/archive'
 import { useT } from '../../i18n/context'
 import styles from './Footer.module.css'
@@ -16,7 +17,7 @@ export default function Footer() {
 
       <div className={styles.top}>
         <div className={styles.brand}>
-          <img src="/images/logo-vcsf-white.png" alt="VCSF 2026" className={styles.logo} />
+          <img src={asset('images/logo-vcsf-white.png')} alt="VCSF 2026" className={styles.logo} />
           <p className={styles.theme}>
             <span>{t.theme}</span>
             <span className={styles.themeSecond}>{t.themeSecond}</span>
@@ -73,9 +74,9 @@ export default function Footer() {
             <span>{t.developed}</span>
             <div className={styles.devLogos}>
               {/* File names may be swapped (see handoff README) — placed as in the design */}
-              <img src="/images/hemera-media.png" alt="Hemera Media" />
+              <img src={asset('images/hemera-media.png')} alt="Hemera Media" />
               <span className={styles.devRule} />
-              <img src="/images/hemera-tech.png" alt="Hemera Tech" />
+              <img src={asset('images/hemera-tech.png')} alt="Hemera Tech" />
             </div>
           </div>
         </div>

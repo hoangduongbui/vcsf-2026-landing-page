@@ -1,4 +1,5 @@
 import { useRef, useState, type MouseEvent } from 'react'
+import { asset } from '../../config'
 import { SDG_COLOR, SDG_FILE, SDG_SCALE, SDG_TEXT } from '../../data/content'
 import { useDragMarquee } from '../../hooks/useDragMarquee'
 import { useViewport } from '../../hooks/useViewport'
@@ -15,7 +16,7 @@ interface Hot {
 }
 
 const pad2 = (n: number) => String(n).padStart(2, '0')
-const iconSrc = (i: number) => `/images/SDGs-icon-${pad2(SDG_FILE[i])}.svg`
+const iconSrc = (i: number) => asset(`images/SDGs-icon-${pad2(SDG_FILE[i])}.svg`)
 
 export default function SdgMarquee() {
   const { locale } = useLocale()

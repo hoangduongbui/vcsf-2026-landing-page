@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { MENU_BG, SECTIONS, type SectionId } from '../../config'
+import { asset, MENU_BG, SECTIONS, type SectionId } from '../../config'
 import { useMotion } from '../../hooks/useMotion'
 import { useScrollState } from '../../hooks/useScrollState'
 import { useViewport } from '../../hooks/useViewport'
@@ -73,9 +73,9 @@ export default function Header() {
               scrollToSection('top')
             }}
           >
-            <img src="/images/logo-vcci.png" alt="VCCI" className={styles.logo} />
-            <img src="/images/logo-vcsf.png" alt="VCSF 2026" className={styles.logo} />
-            <img src="/images/logo-vbcsd.png" alt="VBCSD" className={styles.logoSm} />
+            <img src={asset('images/logo-vcci.png')} alt="VCCI" className={styles.logo} />
+            <img src={asset('images/logo-vcsf.png')} alt="VCSF 2026" className={styles.logo} />
+            <img src={asset('images/logo-vbcsd.png')} alt="VBCSD" className={styles.logoSm} />
           </a>
           <div className={styles.actions}>
             {vw >= 900 && (
