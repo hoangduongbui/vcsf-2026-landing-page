@@ -217,6 +217,7 @@
   font: 600 15px/1.55 var(--font-body);
   color: var(--royal);
   text-wrap: pretty;
+  white-space: pre-line;
 }
 
 .role em {

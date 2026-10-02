@@ -183,6 +183,7 @@
 .role {
   font: 400 14px/1.45 var(--font-body);
   color: var(--on-dark-muted);
+  white-space: pre-line; /* a role may hold several titles, one per line */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

@@ -123,7 +123,11 @@ export default function SpeakerModal({ order, current, onNavigate, onClose }: Pr
         <div className={styles.media}>
           <div ref={fadeRef} className={styles.fade}>
             {sp.img ? (
-              <img src={speakerImage(sp)} alt={txt.name} />
+              <img
+                src={speakerImage(sp)}
+                alt={txt.name}
+                style={sp.focusX === undefined ? undefined : { objectPosition: `${sp.focusX}% 25%` }}
+              />
             ) : (
               <div className={styles.placeholder}>
                 <PersonPlaceholder size={84} />
