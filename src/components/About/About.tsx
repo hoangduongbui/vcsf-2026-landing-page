@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { asset } from '../../config'
 import { useViewport } from '../../hooks/useViewport'
-import { useLocale, useT } from '../../i18n/context'
+import { useT } from '../../i18n/context'
 import SectionHeader from '../SectionHeader/SectionHeader'
 import styles from './About.module.css'
 
@@ -20,7 +20,6 @@ const ICONS_LEAD = 0.5
 
 export default function About() {
   const t = useT()
-  const { locale } = useLocale()
   const { vw } = useViewport()
   const [lead, ...rest] = t.aboutParagraphs
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -44,15 +43,6 @@ export default function About() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.text}>
           <SectionHeader num="02" kicker="VCSF" title={t.about} split />
-          {locale === 'en' && (
-            <div role="note" className={styles.note}>
-              <span className={styles.noteTag}>NOTE</span>
-              <span>
-                Unofficial translation — the official English version of this content has not been provided yet. Please
-                refer to the Vietnamese version.
-              </span>
-            </div>
-          )}
           <p data-reveal="" data-delay="160" className={styles.lead}>
             {lead}
           </p>

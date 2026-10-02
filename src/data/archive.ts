@@ -15,7 +15,7 @@ export interface Year {
 
 /** Newest first — this is also the left-to-right order of the timeline. */
 export const YEARS: Year[] = [
-  { year: '2025', href: 'https://vcsf.vbcsd.vn/', image: I + 'history/2025-gallery.jpg', vi: 'Phát triển bền vững trong kỷ nguyên mới: Biến khát vọng vươn mình thành hành động', en: 'Sustainable Development in a New Era: Turning Aspirations into Action' },
+  { year: '2025', href: 'https://vcsf.vbcsd.vn/', image: I + 'history/2025.jpg', vi: 'Phát triển bền vững trong kỷ nguyên mới: Biến khát vọng vươn mình thành hành động', en: 'Sustainable Development in a New Era: Turning Aspirations into Action' },
   { year: '2024', href: 'https://vcsf.vbcsd.vn/2024/HTML-VCCI-Landing-2024-Aug', image: I + 'history/2024-1.jpg', vi: 'Net Zero 2050: Bồi đắp niềm tin – Kiến tạo chuyển đổi', en: 'Net Zero 2050: Nurturing Trust – Creating Transformation' },
   { year: '2023', href: 'https://vcsf.vbcsd.vn/2023/', image: I + 'history/2023.jpg', vi: 'Cuộc đua xanh toàn cầu: Từ chiến lược đến thực hành kinh doanh bền vững', en: 'Global Green Race: From Strategy to Execution of Sustainable Business' },
   { year: '2022', href: 'https://vcsf.vbcsd.vn/2022/', image: I + 'history/2022.jpg', vi: 'Chuyển đổi, Tăng tốc, Bứt phá: Doanh nghiệp vững bền – Quốc gia thịnh vượng', en: 'Transform, Speed Up, Break Through: Sustainable Business – Prosperous Nation' },

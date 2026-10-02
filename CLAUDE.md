@@ -48,19 +48,19 @@ Chạy, build, deploy và bảng "sửa nội dung ở đâu": xem `README.md`.
 - **Hero mobile**: `min-height: max(100lvh, 560px)` để bù thanh công cụ trình duyệt; video dọc được đẩy lên với `VIDEO_Y_PHONE = 60` (%). Giá trị này dùng chung cho cả vị trí video và cung icon trôi (`computeRings`).
 - **Menu**: vẫn là hiệu ứng fade như design nhưng mềm hơn. Menu mount ở trạng thái ẩn và bật `.open` sau 2 frame. Ảnh nền được preload + decode sẵn. Khoá cuộn giữ đến khi menu unmount. Thời gian đóng `CLOSE_MS = 450`.
 - **Diễn giả**: Đã bỏ nhóm Diễn giả khác (01/10). Hiện có 4 nhóm: Phiên toàn thể / Phiên chuyên đề / Chuyên đề 1 / Chuyên đề 2; `HIDDEN_GROUPS = []`. Thẻ trên mobile hiện 2 cột.
-- **Tag "Tự động dịch"** (handoff `design_handoff_vcsf2026_auto_translate_tag`): bỏ hết tag NHÁP/DRAFT. Mảng `draft` giờ nghĩa là "dịch tự động"; tag chỉ hiện trong modal, trên tiêu đề Tiểu sử, tính theo ngôn ngữ đang xem. Tắt bằng `SHOW_AUTO_TAG`.
+- **Tag "Tự động dịch"** (handoff `design_handoff_vcsf2026_auto_translate_tag`): bỏ hết tag NHÁP/DRAFT. Mảng `draft` giờ nghĩa là "dịch tự động"; tag chỉ hiện trong modal, trên tiêu đề Tiểu sử, tính theo ngôn ngữ đang xem. Tắt bằng `SHOW_AUTO_TAG`. **Từ 02/10 đã gỡ hết tag dịch khỏi trang**: `SHOW_AUTO_TAG = false`, và bỏ hộp NOTE "Unofficial translation" ở mục Giới thiệu bản EN. Không tự thêm lại.
 - **Chương trình**: thanh tab **sticky** dưới header, cách header `--stick-gap` (10px desktop, 12px mobile). Khi đang dính có nền đậm. Đổi tab lúc đang dính thì cuộn về đầu thẻ. Chỉ hiện 2 tab đầu của design (tab thứ 3 là dữ liệu 2025, đã bỏ).
 - **Nút lên đầu trang**: hiện khi cuộn xuống (đã qua 60% màn hình đầu), ẩn khi cuộn lên quá `HIDE_AFTER_PHONE = 240`px trên mobile hoặc 12px trên desktop.
 - **Thư viện ảnh**: bấm cả ô ảnh là mở lightbox; nút phóng to luôn hiện trên màn hình cảm ứng.
 - **Video**: còn 2 tab: VCSF 2025 (`1wRxXT3qVP8`, thumbnail lấy từ `i.ytimg.com` maxres, dự phòng hqdefault) và VCSF 2026 (chưa có id, hiện "Đang cập nhật"). Tên video khai báo theo ngôn ngữ trong `archive.ts`.
-- **Đối tác mobile**: hạng Bạch Kim dùng chung lưới 2 cột với hạng Chiến lược để thẳng hàng.
+- **Đối tác**: Nestlé đứng đầu hạng Chiến lược. Ô hạng Bạch Kim (C.P.) và hạng Đồng cùng kích thước với ô hạng Vàng trên cả desktop và mobile (dùng chung lưới, chiều cao, padding của hạng Vàng). Mỗi ô logo là link mở trang nhà tài trợ (`href` trong `partners.ts`, lấy từ vbcsd.vn).
 
 ## Còn chờ khách / việc trước khi chạy thật
 
 - Ảnh thật VCSF 2025 (dải ảnh đang dùng tạm ảnh các năm trước), id video 2026, link PDF riêng cho từng tài liệu (hiện cả 3 trỏ chung về 1 thư mục Drive), link Facebook.
 - Xác nhận file logo nào là Hemera Media, file nào là Hemera Tech.
 - Giờ kết thúc buổi chiều: agenda tổng thể VI ghi 15h45 + bốc thăm 15h45–16h00; EN ghi 16h30; chương trình chi tiết phiên chuyên đề kết thúc 16h20. Mục Giới thiệu/Live đang theo agenda tổng thể (VI 16:00, EN 16:30).
-- 6 diễn giả chưa có ảnh/bio (PTT Hồ Quốc Dũng, Hồ Sỹ Hùng, Nguyễn Xuân Thắng, Bùi Văn Khắng, Nguyễn Quang Vinh, Hà Thu Thanh); 3 người chưa có bio (Binu Jacob, James Crampton, Lê Hoàng Minh); ảnh Hồ Kiên Trung độ phân giải thấp; 2 bài trình bày Phần 1 phiên chuyên đề chưa có tên.
+- Đã xoá PTT Hồ Quốc Dũng khỏi danh sách diễn giả vì không có ảnh (yêu cầu 02/10); còn 27 diễn giả, đều có ảnh. 8 người chưa có bio (Hồ Sỹ Hùng, Nguyễn Xuân Thắng, Bùi Văn Khắng, Binu Jacob, James Crampton, Lê Hoàng Minh, Nguyễn Quang Vinh, Hà Thu Thanh); ảnh Bùi Văn Khắng độ phân giải thấp (gốc 300×400); 2 bài trình bày Phần 1 phiên chuyên đề chưa có tên.
 - Deploy: tạm dùng Vercel (gói Hobby, chỉ để gửi link xem thử). Chạy thật dự kiến dùng Cloudflare Pages, Vercel Pro hoặc hosting trong nước (nếu khách cần hoá đơn VAT). Tên miền chưa chốt.
 
 ## Môi trường

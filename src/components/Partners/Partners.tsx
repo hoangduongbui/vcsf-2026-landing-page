@@ -8,12 +8,12 @@ import styles from './Partners.module.css'
 /** Per-tier layout, indexed like PARTNERS: Strategic, Platinum, Gold, Bronze. */
 const TIER = {
   cols: {
-    wide: ['repeat(4,minmax(0,1fr))', 'minmax(0,calc((100% - 42px)/4))', 'repeat(6,minmax(0,1fr))', 'repeat(5,minmax(0,1fr))'],
-    // Platinum shares Strategic's 2-column grid so its single logo lines up with the column above.
-    narrow: ['repeat(2,minmax(0,1fr))', 'repeat(2,minmax(0,1fr))', 'repeat(3,minmax(0,1fr))', 'repeat(3,minmax(0,1fr))'],
+    // Platinum and Bronze use Gold's grid, height and padding so their tiles are the same size as a Gold tile.
+    wide: ['repeat(4,minmax(0,1fr))', 'repeat(6,minmax(0,1fr))', 'repeat(6,minmax(0,1fr))', 'repeat(6,minmax(0,1fr))'],
+    narrow: ['repeat(2,minmax(0,1fr))', 'repeat(3,minmax(0,1fr))', 'repeat(3,minmax(0,1fr))', 'repeat(3,minmax(0,1fr))'],
   },
-  height: { wide: ['120px', '100px', '80px', '64px'], narrow: ['104px', '96px', '72px', '60px'] },
-  pad: { wide: ['16px 22px', '14px 22px', '12px 16px', '10px 14px'], narrow: ['14px', '14px', '10px', '8px'] },
+  height: { wide: ['120px', '80px', '80px', '80px'], narrow: ['104px', '72px', '72px', '72px'] },
+  pad: { wide: ['16px 22px', '12px 16px', '12px 16px', '12px 16px'], narrow: ['14px', '10px', '10px', '10px'] },
   /** Tier dot: aqua (strategic), platinum, gold, bronze */
   dot: [
     'linear-gradient(135deg,#5FE0F0 0%,#1FA2F2 45%,#0A4FE6 100%)',
@@ -47,9 +47,16 @@ export default function Partners() {
                 style={{ gridTemplateColumns: TIER.cols[size][i], gap: narrow ? '10px' : '14px' }}
               >
                 {tier.logos.map((lg) => (
-                  <div key={lg.id} className={styles.logo} style={{ height: TIER.height[size][i], padding: TIER.pad[size][i] }}>
+                  <a
+                    key={lg.id}
+                    href={lg.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.logo}
+                    style={{ height: TIER.height[size][i], padding: TIER.pad[size][i] }}
+                  >
                     <img src={asset(`images/partners/${lg.id}.png`)} alt={lg[locale]} title={lg[locale]} loading="lazy" style={{ height: lg.hf }} />
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
