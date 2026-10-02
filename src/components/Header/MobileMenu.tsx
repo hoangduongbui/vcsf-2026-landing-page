@@ -5,6 +5,7 @@ import { getMotion } from '../../hooks/useMotion'
 import { useT } from '../../i18n/context'
 import { scrollToSection } from '../../lib/scroll'
 import LangToggle from '../LangToggle/LangToggle'
+import SocialLinks from '../SocialLinks/SocialLinks'
 import styles from './MobileMenu.module.css'
 
 /** Where the close button sits, so it lands exactly on top of the burger. */
@@ -95,6 +96,7 @@ export default function MobileMenu({ anchor, labels, onClose }: Props) {
             </a>
           ))}
         </nav>
+        <SocialLinks className={styles.social} style={{ '--i': items.length } as CSSProperties} />
       </div>
     </div>
   )

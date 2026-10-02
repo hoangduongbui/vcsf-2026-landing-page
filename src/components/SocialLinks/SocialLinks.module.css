@@ -1,0 +1,24 @@
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: var(--social-size, 54px);
+  height: var(--social-size, 54px);
+  border-radius: 50%;
+  background: var(--social-bg, rgba(255, 255, 255, .1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .3s;
+}
+
+.btn svg {
+  width: var(--social-icon, 24px);
+  height: var(--social-icon, 24px);
+}
+
+.btn:hover {
+  background: var(--social-bg-hover, rgba(255, 255, 255, .2));
+}

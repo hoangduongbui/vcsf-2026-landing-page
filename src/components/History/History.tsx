@@ -6,7 +6,7 @@ import { useLocale, useT } from '../../i18n/context'
 import SectionHeader from '../SectionHeader/SectionHeader'
 import styles from './History.module.css'
 
-const STEP_MS = 5000
+const STEP_MS = 6000
 
 export default function History() {
   const t = useT()
@@ -32,7 +32,7 @@ export default function History() {
     return () => io.disconnect()
   }, [])
 
-  // Autoplay: fill the progress bar over 5 s, then advance — but only while the
+  // Autoplay: fill the progress bar over 6 s, then advance — but only while the
   // section is on screen and the tab is visible; otherwise start the bar again.
   useEffect(() => {
     const bar = barRef.current

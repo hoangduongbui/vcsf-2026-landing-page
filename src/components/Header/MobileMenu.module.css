@@ -41,6 +41,8 @@
   width: var(--container);
   margin: 0 auto;
   padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .top {
@@ -101,6 +103,29 @@
   transition: opacity .25s ease-in, transform .3s ease-in, padding .3s, color .3s;
 }
 
+/* Social buttons right under the list (right on desktop, centred on phones):
+   fade in as the last item of the stagger */
+.inner .social {
+  --social-size: 58px;
+  --social-icon: 28px;
+  --social-bg: rgba(255, 255, 255, .2);
+  --social-bg-hover: rgba(255, 255, 255, .32);
+  gap: 14px;
+  margin-top: 24px;
+  align-self: flex-end;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .25s ease-in, transform .3s ease-in;
+}
+
+.open .social {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity .7s cubic-bezier(.22, 1, .36, 1) calc(90ms + var(--i, 0) * 55ms),
+    transform .8s cubic-bezier(.22, 1, .36, 1) calc(90ms + var(--i, 0) * 55ms);
+}
+
 /* Opening: staggered, long soft ease-out */
 .open .item {
   opacity: 1;
@@ -127,7 +152,14 @@
   letter-spacing: -.02em;
 }
 
+@media (max-width: 759px) {
+  .inner .social {
+    align-self: center;
+  }
+}
+
 html[data-motion='off'] .menu,
-html[data-motion='off'] .item {
+html[data-motion='off'] .item,
+html[data-motion='off'] .social {
   transition: none;
 }

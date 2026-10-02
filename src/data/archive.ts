@@ -15,7 +15,7 @@ export interface Year {
 
 /** Newest first — this is also the left-to-right order of the timeline. */
 export const YEARS: Year[] = [
-  { year: '2025', href: 'https://vcsf.vbcsd.vn/', image: I + 'history/2025.jpg', vi: 'Phát triển bền vững trong kỷ nguyên mới: Biến khát vọng vươn mình thành hành động', en: 'Sustainable Development in a New Era: Turning Aspirations into Action' },
+  { year: '2025', href: 'https://vcsf.vbcsd.vn/2025/',image: I + 'history/2025.jpg', vi: 'Phát triển bền vững trong kỷ nguyên mới: Biến khát vọng vươn mình thành hành động', en: 'Sustainable Development in a New Era: Turning Aspirations into Action' },
   { year: '2024', href: 'https://vcsf.vbcsd.vn/2024/HTML-VCCI-Landing-2024-Aug', image: I + 'history/2024-1.jpg', vi: 'Net Zero 2050: Bồi đắp niềm tin – Kiến tạo chuyển đổi', en: 'Net Zero 2050: Nurturing Trust – Creating Transformation' },
   { year: '2023', href: 'https://vcsf.vbcsd.vn/2023/', image: I + 'history/2023.jpg', vi: 'Cuộc đua xanh toàn cầu: Từ chiến lược đến thực hành kinh doanh bền vững', en: 'Global Green Race: From Strategy to Execution of Sustainable Business' },
   { year: '2022', href: 'https://vcsf.vbcsd.vn/2022/', image: I + 'history/2022.jpg', vi: 'Chuyển đổi, Tăng tốc, Bứt phá: Doanh nghiệp vững bền – Quốc gia thịnh vượng', en: 'Transform, Speed Up, Break Through: Sustainable Business – Prosperous Nation' },
@@ -33,6 +33,7 @@ export const ytThumb = (id: string, size: 'maxresdefault' | 'hqdefault' = 'maxre
   `https://i.ytimg.com/vi/${id}/${size}.jpg`
 
 export const ALBUM_URL = 'https://vbcsd.vn/album.asp'
+export const FACEBOOK_URL = 'https://www.facebook.com/VBC4SD/'
 export const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@hoiongdoanhnghiepvisuphatt244'
 /** All documents currently point to one shared folder (individual PDFs pending). */
 export const DOCUMENTS_URL = 'https://drive.google.com/drive/folders/1AkbTogZPtPyeqUJ2xS4y3OYYRG3D-UqR'
@@ -44,18 +45,20 @@ export interface Photo {
   ar: string
 }
 
-// Source: vbcsd.vn/albumde.asp?id=48 (VCSF 2025 album) — real 2025 photos pending from the client.
+// Two photos per edition (group photo, then panel), newest first.
+// Source: the forum albums on vbcsd.vn (albumde.asp?id=48 / 45 / 40 / 36 / 31), 500px wide.
+const G = I + 'gallery/'
 export const PHOTOS: Photo[] = [
-  { src: I + 'history/2023.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2025-gallery.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2022.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2021-new.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2020.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2021.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2025-gallery.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2023.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2024-1.jpg', alt: 'VCSF 2025', ar: '3/2' },
-  { src: I + 'history/2025-gallery.jpg', alt: 'VCSF 2025', ar: '3/2' },
+  { src: G + '2025-1.jpg', alt: 'VCSF 2025', ar: '500/281' },
+  { src: G + '2025-2.jpg', alt: 'VCSF 2025', ar: '3/2' },
+  { src: G + '2024-1.jpg', alt: 'VCSF 2024', ar: '3/2' },
+  { src: G + '2024-2.jpg', alt: 'VCSF 2024', ar: '3/2' },
+  { src: G + '2023-1.jpg', alt: 'VCSF 2023', ar: '3/2' },
+  { src: G + '2023-2.jpg', alt: 'VCSF 2023', ar: '3/2' },
+  { src: G + '2022-1.jpg', alt: 'VCSF 2022', ar: '3/2' },
+  { src: G + '2022-2.jpg', alt: 'VCSF 2022', ar: '3/2' },
+  { src: G + '2021-1.jpg', alt: 'VCSF 2021', ar: '500/235' },
+  { src: G + '2021-2.jpg', alt: 'VCSF 2021', ar: '3/2' },
 ]
 
 export interface Video {

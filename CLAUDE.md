@@ -57,7 +57,7 @@ Chạy, build, deploy và bảng "sửa nội dung ở đâu": xem `README.md`.
 
 ## Còn chờ khách / việc trước khi chạy thật
 
-- Ảnh thật VCSF 2025 (dải ảnh đang dùng tạm ảnh các năm trước), id video 2026, link PDF riêng cho từng tài liệu (hiện cả 3 trỏ chung về 1 thư mục Drive), link Facebook.
+- Dải ảnh Thư viện: 10 ảnh lấy từ album vbcsd.vn (2025→2021, mỗi năm 2 ảnh, chỉ rộng 500px; có ảnh gốc nét hơn thì thay trong `public/images/gallery/`). Còn chờ: id video 2026, link PDF riêng cho từng tài liệu (hiện cả 3 trỏ chung về 1 thư mục Drive).
 - Xác nhận file logo nào là Hemera Media, file nào là Hemera Tech.
 - Giờ kết thúc buổi chiều: agenda tổng thể VI ghi 15h45 + bốc thăm 15h45–16h00; EN ghi 16h30; chương trình chi tiết phiên chuyên đề kết thúc 16h20. Mục Giới thiệu/Live đang theo agenda tổng thể (VI 16:00, EN 16:30).
 - Đã xoá PTT Hồ Quốc Dũng khỏi danh sách diễn giả vì không có ảnh (yêu cầu 02/10); còn 27 diễn giả, đều có ảnh. 8 người chưa có bio (Hồ Sỹ Hùng, Nguyễn Xuân Thắng, Bùi Văn Khắng, Binu Jacob, James Crampton, Lê Hoàng Minh, Nguyễn Quang Vinh, Hà Thu Thanh); ảnh Bùi Văn Khắng độ phân giải thấp (gốc 300×400); 2 bài trình bày Phần 1 phiên chuyên đề chưa có tên.
