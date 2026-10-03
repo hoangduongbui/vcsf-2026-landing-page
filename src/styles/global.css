@@ -54,18 +54,6 @@ button {
   to { opacity: 1; }
 }
 
-@keyframes vcLiveW {
-  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, .85); }
-  70% { box-shadow: 0 0 0 9px rgba(255, 255, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-}
-
-@keyframes vcLive {
-  0% { box-shadow: 0 0 0 0 rgba(255, 77, 94, .7); }
-  70% { box-shadow: 0 0 0 10px rgba(255, 77, 94, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 77, 94, 0); }
-}
-
 @keyframes vcPop {
   from { opacity: 0; transform: translateY(24px) scale(.96); }
   to { opacity: 1; transform: none; }

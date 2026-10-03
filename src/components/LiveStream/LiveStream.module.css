@@ -138,6 +138,12 @@
   border: 0;
 }
 
+/* Player loaded behind the poster while waiting for the stream to start. */
+.player iframe.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .poster {
   position: absolute;
   inset: 0;

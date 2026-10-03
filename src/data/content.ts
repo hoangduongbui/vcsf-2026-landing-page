@@ -3,9 +3,12 @@
 export type Locale = 'vi' | 'en'
 
 export const LIVE = {
-  start: '2026-10-05T07:30:00+07:00', end: '2026-10-05T17:30:00+07:00',
-  vi: { badge: 'Đang phát trực tiếp', aria: 'Phát trực tiếp VCSF 2026', title: 'Theo dõi trực tiếp Diễn đàn VCSF 2026', desc: 'Toàn bộ phiên toàn thể và các phiên chuyên đề được phát trực tiếp trên kênh YouTube của VBCSD.', time: '7:45 – 16:00 · Thứ Hai, 05/10/2026', venue: 'Phòng Sông Hồng, Khách sạn Sheraton Hà Nội', open: 'Xem trên YouTube', cta: 'Xem trực tiếp sự kiện', soon: 'Luồng phát trực tiếp sẽ bắt đầu lúc 8:00' },
-  en: { badge: 'Live now', aria: 'VCSF 2026 live stream', title: 'Watch VCSF 2026 live', desc: 'The plenary and all breakout sessions are streamed live on the VBCSD YouTube channel.', time: '7:45 – 16:30 · Monday, 5 October 2026', venue: 'Hong River Ballroom, Sheraton Hanoi Hotel', open: 'Watch on YouTube', cta: 'Watch the event live', soon: 'The live stream starts at 8:00' },
+  // The box appears at `start` (1 h before the stream). From then until `catchEnd` it
+  // keeps the "starts at 8:00" poster and swaps to the channel's stream as soon as it
+  // really plays; after `catchEnd` the channel player is shown whatever its state.
+  start: '2026-10-05T07:00:00+07:00', catchEnd: '2026-10-05T09:00:00+07:00', end: '2026-10-05T17:30:00+07:00',
+  vi: { badge: 'Đang phát trực tiếp', aria: 'Phát trực tiếp VCSF 2026', title: 'Theo dõi trực tiếp Diễn đàn VCSF 2026', desc: 'Toàn bộ phiên toàn thể và các phiên chuyên đề được phát trực tiếp trên kênh YouTube của VBCSD.', time: '8:00 – 17:00 · Thứ Hai, 05/10/2026', venue: 'Khách sạn Sheraton Hanoi West Lake, Hà Nội', open: 'Xem trên YouTube', cta: 'Xem trực tiếp sự kiện', soon: 'Luồng phát trực tiếp sẽ bắt đầu lúc 8:00' },
+  en: { badge: 'Live now', aria: 'VCSF 2026 live stream', title: 'Watch VCSF 2026 live', desc: 'The plenary and all breakout sessions are streamed live on the VBCSD YouTube channel.', time: '8:00 – 17:00 · Monday, 5 October 2026', venue: 'Sheraton Hanoi West Lake Hotel, Hanoi', open: 'Watch on YouTube', cta: 'Watch the event live', soon: 'The live stream starts at 8:00' },
 };
 
 /** Extract a YouTube video id from a URL or bare id. */
@@ -44,7 +47,6 @@ export const L = {
     library: 'Thư viện', libraryAside: 'NHỮNG KHOẢNH KHẮC LAN TỎA CẢM HỨNG', libraryAlbumLink: 'Album ảnh', libraryVideoList: 'Danh sách Video',
     documents: 'Tài liệu', documentsAside: 'TRI THỨC KIẾN TẠO HÀNH ĐỘNG', documentsOpen: 'Mở thư mục', download: 'Tải xuống', close: 'Đóng', expand: 'Phóng to',
     libraryPhotos: 'Ảnh', libraryVideos: 'Video', videoSoon: 'Đang cập nhật',
-    docs: ['Phiên toàn thể', 'Hội thảo 01', 'Hội thảo 02'],
     partners: 'Đối tác đồng hành', tiers: ['Nhà tài trợ Chiến lược', 'Nhà tài trợ Bạch Kim', 'Nhà tài trợ Vàng', 'Nhà tài trợ Đồng'],
     address: 'Tầng 4, số 9 Đào Duy Anh, Phường Kim Liên, Hà Nội', social: 'Mạng xã hội',
     copyright: 'Bản quyền 2026', council: 'Hội đồng Doanh nghiệp vì sự Phát triển Bền vững Việt Nam (VBCSD)',
@@ -82,7 +84,6 @@ export const L = {
     library: 'Library', libraryAside: 'MOMENTS THAT INSPIRE CHANGE', libraryAlbumLink: 'Photo album', libraryVideoList: 'Video list',
     documents: 'Documents', documentsAside: 'KNOWLEDGE THAT DRIVES ACTION', documentsOpen: 'Open folder', download: 'Download', close: 'Close', expand: 'Expand',
     libraryPhotos: 'Photos', libraryVideos: 'Videos', videoSoon: 'Updating',
-    docs: ['Plenary session', 'Workshop 01', 'Workshop 02'],
     partners: 'Our partners', tiers: ['Strategic Sponsors', 'Platinum Sponsors', 'Gold Sponsors', 'Bronze Sponsors'],
     address: '4th floor, 9 Dao Duy Anh Street, Kim Lien Ward, Hanoi', social: 'Social media',
     copyright: 'Copyright 2026', council: 'Vietnam Business Council for Sustainable Development (VBCSD)',

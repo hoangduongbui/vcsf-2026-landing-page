@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Logo VCSF, nền trong suốt. viewBox vuông (logo gốc 74.7 × 40 được canh giữa theo chiều dọc). -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="3.9 -14.25 68.5 68.5">
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        mask: url(#mask-5);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient10);
+      }
+
+      .st3 {
+        mask: url(#mask-1);
+      }
+
+      .st4 {
+        fill: #ea9b4f;
+      }
+
+      .st4, .st5 {
+        fill-rule: evenodd;
+      }
+
+      .st6 {
+        mask: url(#mask-10);
+      }
+
+      .st7 {
+        mask: url(#mask-6);
+      }
+
+      .st8 {
+        mask: url(#mask-7);
+      }
+
+      .st9 {
+        fill: #fff;
+      }
+
+      .st10 {
+        mask: url(#mask);
+      }
+
+      .st11 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st12 {
+        fill: url(#linear-gradient9);
+      }
+
+      .st13 {
+        fill: url(#linear-gradient8);
+      }
+
+      .st14 {
+        fill: url(#linear-gradient11);
+      }
+
+      .st15 {
+        mask: url(#mask-8);
+      }
+
+      .st16 {
+        mask: url(#mask-2);
+      }
+
+      .st17 {
+        mask: url(#mask-9);
+      }
+
+      .st5 {
+        fill: #987838;
+      }
+
+      .st18 {
+        fill: url(#linear-gradient12);
+      }
+
+      .st19 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st20 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st21 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st22 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st23 {
+        mask: url(#mask-11);
+      }
+
+      .st24 {
+        mask: url(#mask-12);
+      }
+
+      .st25 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st26 {
+        mask: url(#mask-4);
+      }
+
+      .st27 {
+        fill: url(#linear-gradient);
+      }
+
+      .st28 {
+        mask: url(#mask-3);
+      }
+    </style>
+    <mask id="mask" x="45.6" y="25.6" width="19.9" height="19.9" maskUnits="userSpaceOnUse">
+      <g id="mask0_2133_715">
+        <path class="st9" d="M54.8,32.1c-.3.8-.5,1.6-.8,2.3-2.2,7.5,3,5.5,5.1,5-1.9-1.2-2.2-5.6-1-10.1-1.4.4-2.7,1.3-3.4,2.8Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient" x1="59.5" y1="8.3" x2="52.5" y2="1.2" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e7d942"/>
+      <stop offset="0" stop-color="#e7d942"/>
+      <stop offset=".4" stop-color="#ea9b4f"/>
+      <stop offset=".5" stop-color="#e9974b"/>
+      <stop offset=".5" stop-color="#e68b40"/>
+      <stop offset=".6" stop-color="#e38036"/>
+      <stop offset=".8" stop-color="#e05937"/>
+      <stop offset=".9" stop-color="#d93a34"/>
+      <stop offset="1" stop-color="#d62733"/>
+    </linearGradient>
+    <mask id="mask-1" x="38.2" y=".6" width="21.5" height="33.2" maskUnits="userSpaceOnUse">
+      <g id="mask1_2133_715">
+        <path class="st9" d="M51.2,33.7c1.7-2.2,2.9-4.9,3.6-7.6,2.7-10.8-8.8-20.4-1.1-25.6-15.5,6.8,6,17.7-2.5,33.1"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient1" x1="48.9" y1="2.4" x2="48.9" y2="35.8" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e6a43a"/>
+      <stop offset=".5" stop-color="#9fc180"/>
+      <stop offset="1" stop-color="#36adad"/>
+    </linearGradient>
+    <mask id="mask-2" x="39.2" y=".6" width="21.5" height="33.2" maskUnits="userSpaceOnUse">
+      <g id="mask2_2133_715">
+        <path class="st9" d="M48.9,16.6c2.8,5.2,4.2,11.2,2.3,17.1,9.5-15.2-12-26.2,2.5-33.1-9.9,2.5-8.2,9.8-4.8,16"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient2" x1="49.9" y1="2.4" x2="49.9" y2="35.8" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ebcf80"/>
+      <stop offset=".5" stop-color="#9fc180"/>
+      <stop offset="1" stop-color="#80b280"/>
+    </linearGradient>
+    <mask id="mask-3" x="18.5" y="18" width="35.2" height="22.3" maskUnits="userSpaceOnUse">
+      <g id="mask3_2133_715">
+        <path class="st9" d="M42.3,36.1c-14,3.9-22.5-7-23.7-16,1.1,9.3,6.9,19.2,18.8,19.8,6.3.3,10.9-2.3,13.9-6.2,2.6-4.9,1-11.2-1.6-15.8,2.5,5,2.2,15.5-7.3,18.2"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient3" x1="44.4" y1="10.8" x2="9.4" y2="10.8" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ebe6c9"/>
+      <stop offset=".5" stop-color="#80bdae"/>
+      <stop offset="1" stop-color="#1790ab"/>
+    </linearGradient>
+    <mask id="mask-4" x="18.4" y="19.3" width="34.2" height="22.1" maskUnits="userSpaceOnUse">
+      <g id="mask4_2133_715">
+        <path class="st9" d="M42.7,36.5c7.8-2.8,10-9.8,7.5-16.9,1.4,4.9-1.6,10.5-6.4,13.6-3,1.9-6.8,2.5-10.4,1.5-8.5-2.6-13.1-8.5-15-15.4.8,9.7,10.3,22.1,24.2,17.1Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient4" x1="39.9" y1="9.5" x2="7.1" y2="9.5" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ebe6c9"/>
+      <stop offset=".5" stop-color="#80bdae"/>
+      <stop offset="1" stop-color="#1790ab"/>
+    </linearGradient>
+    <mask id="mask-5" x="17.6" y="7" width="17.8" height="27.5" maskUnits="userSpaceOnUse">
+      <g id="mask5_2133_715">
+        <path class="st9" d="M21,12c-3.4,7.5.6,19.2,11.7,22.4-3.1-1.1-5.8-3.2-7.4-6.1-2.8-4.7-2.7-10.6-.8-14.9.6-1.3,2.2-2.1,3.6-1.8,2.4.5,2.3,2.4,1.8,3.9-3.1,9.9-1.6,15.7,4.4,17.4-8.8-4.3-2.4-12.7-.5-18.4,1.7-5-1.4-7.6-5-7.6s-6.2,1.6-7.7,5"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient5" x1="26.5" y1="44.2" x2="26.5" y2="16.5" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4a80af"/>
+      <stop offset=".5" stop-color="#4cacd6"/>
+      <stop offset="1" stop-color="#80c4ce"/>
+    </linearGradient>
+    <mask id="mask-6" x="5.4" y="-2.4" width="43" height="44.6" maskUnits="userSpaceOnUse">
+      <g id="mask6_2133_715">
+        <path class="st9" d="M18.4,18.3c.6,12.6,14.7,16.3,14.4,16.2-9.4-2.9-13.9-13.5-10.8-22,2.5-6.9,13.5-5.8,10.8,2.4-1.9,5.7-7.6,14.6,1.5,18.2-8.5-5.2,1.3-14.6,1.3-21.6,0-4.1-2.3-6-6.3-6.2-.3,0-.6,0-.9,0-7.8,0-10.4,7.1-10.1,13.1"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient6" x1="40.2" y1="43" x2="25.6" y2="17.7" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#307ba6"/>
+      <stop offset=".7" stop-color="#3d99cd"/>
+      <stop offset="1" stop-color="#5ab1dc"/>
+    </linearGradient>
+    <mask id="mask-7" x="31.9" y="18.3" width="19.2" height="19.5" maskUnits="userSpaceOnUse">
+      <g id="mask7_2133_715">
+        <path class="st9" d="M39.5,29.1c-2.7,1.7-.8,4.7,1.5,3.3,3.4-2,5-6.1,4.3-10.1-.9,4.8-2.7,4.9-5.8,6.8Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient7" x1="42.9" y1="9.3" x2="37.2" y2="19.1" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#303f80"/>
+      <stop offset="1" stop-color="#73bdc9"/>
+    </linearGradient>
+    <mask id="mask-8" x="33.7" y="22.1" width="6.7" height="6.8" maskUnits="userSpaceOnUse">
+      <g id="mask8_2133_715">
+        <path class="st9" d="M35.3,25.4c0,1,.8,1.9,1.7,1.9s1.7-.8,1.7-1.9-.8-1.9-1.7-1.9-1.7.8-1.7,1.9Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient8" x1="32.2" y1="6" x2="36.2" y2="13" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab1dc"/>
+      <stop offset=".3" stop-color="#3d99cd"/>
+      <stop offset=".7" stop-color="#307ba6"/>
+      <stop offset="1" stop-color="#204f86"/>
+    </linearGradient>
+    <mask id="mask-9" x="13.5" y="18.6" width="4.9" height="4.8" maskUnits="userSpaceOnUse">
+      <g id="mask9_2133_715">
+        <path class="st9" d="M15.5,19.6c-.7.2-1.2,1-1,1.8.2.8,1,1.2,1.8,1,.8-.2,1.2-1,1-1.8-.2-.6-.8-1-1.4-1s-.3,0-.4,0Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient9" x1="11.7" y1="32.1" x2="15.6" y2="19.7" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#80c4ce"/>
+      <stop offset=".5" stop-color="#4cacd6"/>
+      <stop offset="1" stop-color="#4a80af"/>
+    </linearGradient>
+    <mask id="mask-10" x="4.2" y="1.3" width="7.4" height="7.1" maskUnits="userSpaceOnUse">
+      <g id="mask10_2133_715">
+        <path class="st9" d="M7,1.4c-1.8.5-2.8,2.4-2.3,4.1.5,1.8,2.4,2.8,4.1,2.3,1.8-.5,2.8-2.3,2.3-4.1-.4-1.5-1.8-2.4-3.2-2.4s-.6,0-.9.1Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient10" x1="7.9" y1="38.9" x2="7.9" y2="45.6" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab1dc"/>
+      <stop offset=".3" stop-color="#3d99cd"/>
+      <stop offset=".7" stop-color="#307ba6"/>
+      <stop offset="1" stop-color="#204f86"/>
+    </linearGradient>
+    <mask id="mask-11" x="-9.8" y="1.4" width="47.1" height="47.2" maskUnits="userSpaceOnUse">
+      <g id="mask11_2133_715">
+        <path class="st9" d="M8.6,10.1c-3.5,1-3.4,5.8-2.9,8.3,2,10.5,8.1,18.4,16.7,21.6-8.7-7-8.3-13.5-9.7-25-.3-2.4-1.3-5-3.3-5s-.5,0-.8.1Z"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient11" x1="31.4" y1="-3.7" x2="4.1" y2="25.1" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#307ba6"/>
+      <stop offset=".4" stop-color="#307ba6"/>
+      <stop offset=".7" stop-color="#3d99cd"/>
+      <stop offset="1" stop-color="#5ab1dc"/>
+    </linearGradient>
+    <mask id="mask-12" x="-5.5" y="7.3" width="40" height="40" maskUnits="userSpaceOnUse">
+      <g id="mask12_2133_715">
+        <path class="st9" d="M9.8,14.9c-2.8.8-2.7,4.8-2.2,6.9,1.9,8.7,7.2,15.3,14.4,17.9-7.3-6-7.5-11.2-8.9-20.8-.3-2-1-4.1-2.7-4.1s-.4,0-.6,0"/>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient12" x1="34.6" y1="-7.9" x2="11.2" y2="16" gradientTransform="translate(0 39.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#307ba6"/>
+      <stop offset=".3" stop-color="#307ba6"/>
+      <stop offset=".7" stop-color="#3d99cd"/>
+      <stop offset="1" stop-color="#5ab1dc"/>
+    </linearGradient>
+  </defs>
+  <path class="st5" d="M54.8,32.1c1.3.7,2.2-1.3,3.4-2.8.1-.5.3-.9.4-1.4-1.2-1.5-2.7,1.1-3.8,4.2Z"/>
+  <g class="st10">
+    <path class="st27" d="M55.5,25.6l-10,10,10,10,10-10-10-10Z"/>
+  </g>
+  <path class="st4" d="M54.8,32.1c1-2.6,2.2-3.4,3.8-4.2,1.7-.8,3.6-1.2,4.9-1.9,2.6-1.5,4.7-6.1,6.4-9.8-4.7,2.3-10.4,5.1-13.6,12-.6,1.2-1,2.5-1.5,3.9Z"/>
+  <path class="st4" d="M55.8,29.6c1.8-7,6-9.8,9.1-12.9C68.7,12.8,69.9,10,72.1,0c-3,3.4-7.8,8.2-10.9,13.7-2.4,4.1-4.4,9.6-5.4,15.9Z"/>
+  <g class="st3">
+    <path class="st11" d="M59.7.6h-21.5v33.1h21.5V.6Z"/>
+  </g>
+  <g class="st16">
+    <path class="st0" d="M60.7.6h-21.5v33.1h21.5V.6Z"/>
+  </g>
+  <g class="st28">
+    <path class="st22" d="M53.7,18H18.5v22.3h35.2v-22.3Z"/>
+  </g>
+  <g class="st26">
+    <path class="st20" d="M52.6,19.3H18.4v22.1h34.2v-22.1Z"/>
+  </g>
+  <g class="st1">
+    <path class="st21" d="M35.4,7h-17.8v27.5h17.8V7Z"/>
+  </g>
+  <g class="st7">
+    <path class="st25" d="M22.5-2.4L5.4,27.2l25.9,15,17.1-29.6L22.5-2.4Z"/>
+  </g>
+  <g class="st8">
+    <path class="st19" d="M43.7,18.3l-11.9,6.9,7.3,12.6,11.9-6.9-7.3-12.6Z"/>
+  </g>
+  <g class="st15">
+    <path class="st13" d="M36.2,22.1l-2.5,4.3,4.2,2.4,2.5-4.3-4.2-2.4Z"/>
+  </g>
+  <g class="st17">
+    <path class="st12" d="M17.2,18.6l-3.7,1.2,1.1,3.6,3.7-1.2-1.1-3.6Z"/>
+  </g>
+  <g class="st6">
+    <path class="st2" d="M11.7,1.3h-7.4v7.1h7.4V1.3Z"/>
+  </g>
+  <g class="st23">
+    <path class="st14" d="M14.2,1.4L-9.8,24.2l23.1,24.4,24-22.7L14.2,1.4Z"/>
+  </g>
+  <g class="st24">
+    <path class="st18" d="M14.6,7.3L-5.5,27l19.8,20.2,20.1-19.7L14.6,7.3Z"/>
+  </g>
+</svg>

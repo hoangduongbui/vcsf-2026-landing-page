@@ -39,7 +39,7 @@ Chạy, build, deploy và bảng "sửa nội dung ở đâu": xem `README.md`.
   - `useDragMarquee` (dải chạy vô tận kéo tay được, dùng cho SDG và dải ảnh).
   - `useBodyLock` (khoá cuộn và bù độ rộng scrollbar qua `--sbw`, để header/nút fixed không bị giật).
   - `useLive`, `useNow`.
-- Biến CSS toàn cục: màu trong `src/styles/tokens.css`. `--header-h` do Header tự cập nhật bằng ResizeObserver với `box: 'border-box'` (bắt buộc border-box, vì khi cuộn header chỉ đổi padding). Hiệu ứng chung (`vcFade`, `vcSlide`, `vcPop`, `vcSwap`, `vcFloat`, `vcLive*`) nằm trong `global.css`.
+- Biến CSS toàn cục: màu trong `src/styles/tokens.css`. `--header-h` do Header tự cập nhật bằng ResizeObserver với `box: 'border-box'` (bắt buộc border-box, vì khi cuộn header chỉ đổi padding). Hiệu ứng chung (`vcFade`, `vcSlide`, `vcPop`, `vcSwap`, `vcFloat`) nằm trong `global.css`. **Lưu ý**: CSS Modules đổi tên animation dùng trong file `.module.css`, nên keyframes ở `global.css` không khớp và hiệu ứng không chạy. `vcLive*` đã chuyển vào `LiveDot.module.css` (03/10). `vcSwap` / `vcFade` / `vcPop` gọi từ các module khác vẫn đang bị lỗi này, chưa sửa, chờ chủ dự án quyết.
 - Hiệu ứng "đổi nội dung" (đổi năm, tab, video, ảnh lightbox) chỉ chạy **sau lần đổi đầu tiên**, không chạy lúc mount và không chạy khi đổi ngôn ngữ.
 - Modal diễn giả và Lightbox render qua `createPortal` ra `document.body`.
 
@@ -53,13 +53,15 @@ Chạy, build, deploy và bảng "sửa nội dung ở đâu": xem `README.md`.
 - **Nút lên đầu trang**: hiện khi cuộn xuống (đã qua 60% màn hình đầu), ẩn khi cuộn lên quá `HIDE_AFTER_PHONE = 240`px trên mobile hoặc 12px trên desktop.
 - **Thư viện ảnh**: bấm cả ô ảnh là mở lightbox; nút phóng to luôn hiện trên màn hình cảm ứng.
 - **Video**: còn 2 tab: VCSF 2025 (`1wRxXT3qVP8`, thumbnail lấy từ `i.ytimg.com` maxres, dự phòng hqdefault) và VCSF 2026 (chưa có id, hiện "Đang cập nhật"). Tên video khai báo theo ngôn ngữ trong `archive.ts`.
+- **Tài liệu** (03/10, tự thiết kế, khác design): hiện cả 4 file DOCX trên Drive thành 4 dòng (Chương trình dự kiến; Chương trình dự kiến – Phiên chuyên đề; mỗi cái có bản VI và EN), khai báo trong `DOCUMENTS` của `archive.ts`. 2 file của ngôn ngữ đang xem đứng trước; mỗi dòng ghi tên bằng ngôn ngữ của chính file đó và chỉ có một nút "Tải xuống" (đã bỏ nút "Bản tiếng Anh" theo yêu cầu). Link là trang xem trước của Drive (`docUrl`), không phải tải trực tiếp.
+- **Live** (03/10): box và nút đỏ ở Hero bật lúc 07:00, tắt 17:30 ngày 05/10 (`LIVE.start` / `LIVE.end`). Phương án A: `LIVE_URL` = `ym_Euj7W8CM` (chủ dự án xác nhận 03/10, ước 80% sẽ dùng link này), hiện ngay khi box bật. Phương án B: luồng của kênh VBCSD qua `LIVE_CHANNEL_ID` (`embed/live_stream?channel=…`), được tải ẩn và theo dõi bằng `useLiveProbe` (YouTube IFrame API), tải lại mỗi 60 giây khi A chưa phát. Box đổi sang B khi B thật sự phát mà A chưa phát (họ đổi link), hoặc khi A báo lỗi; A lỗi mà B chưa phát thì hiện ảnh chờ đến 09:00 (`LIVE.catchEnd`), sau đó hiện thẳng khung của kênh. `LIVE_URL` trống thì chỉ còn B với cùng luật ảnh chờ.
 - **Đối tác**: Nestlé đứng đầu hạng Chiến lược. Ô hạng Bạch Kim (C.P.) và hạng Đồng cùng kích thước với ô hạng Vàng trên cả desktop và mobile (dùng chung lưới, chiều cao, padding của hạng Vàng). Mỗi ô logo là link mở trang nhà tài trợ (`href` trong `partners.ts`, lấy từ vbcsd.vn).
 
 ## Còn chờ khách / việc trước khi chạy thật
 
-- Dải ảnh Thư viện: 10 ảnh lấy từ album vbcsd.vn (2025→2021, mỗi năm 2 ảnh, chỉ rộng 500px; có ảnh gốc nét hơn thì thay trong `public/images/gallery/`). Còn chờ: id video 2026, link PDF riêng cho từng tài liệu (hiện cả 3 trỏ chung về 1 thư mục Drive).
+- Dải ảnh Thư viện: 10 ảnh lấy từ album vbcsd.vn (2025→2021, mỗi năm 2 ảnh, chỉ rộng 500px; có ảnh gốc nét hơn thì thay trong `public/images/gallery/`). Còn chờ: id video 2026.
 - Xác nhận file logo nào là Hemera Media, file nào là Hemera Tech.
-- Giờ kết thúc buổi chiều: agenda tổng thể VI ghi 15h45 + bốc thăm 15h45–16h00; EN ghi 16h30; chương trình chi tiết phiên chuyên đề kết thúc 16h20. Mục Giới thiệu/Live đang theo agenda tổng thể (VI 16:00, EN 16:30).
+- Giờ kết thúc buổi chiều: agenda tổng thể VI ghi 15h45 + bốc thăm 15h45–16h00; EN ghi 16h30; chương trình chi tiết phiên chuyên đề kết thúc 16h20. Mục Giới thiệu đang theo agenda tổng thể (VI 16:00, EN 16:30). Box Live từ 03/10 theo bản design mới: "8:00 – 17:00", "Khách sạn Sheraton Hanoi West Lake, Hà Nội" (bản EN tự dịch, chưa có design), nên đang lệch với mục Giới thiệu.
 - Đã xoá PTT Hồ Quốc Dũng khỏi danh sách diễn giả vì không có ảnh (yêu cầu 02/10); còn 27 diễn giả, đều có ảnh. 8 người chưa có bio (Hồ Sỹ Hùng, Nguyễn Xuân Thắng, Bùi Văn Khắng, Binu Jacob, James Crampton, Lê Hoàng Minh, Nguyễn Quang Vinh, Hà Thu Thanh); ảnh Bùi Văn Khắng độ phân giải thấp (gốc 300×400); 2 bài trình bày Phần 1 phiên chuyên đề chưa có tên.
 - Deploy: tạm dùng Vercel (gói Hobby, chỉ để gửi link xem thử). Chạy thật dự kiến dùng Cloudflare Pages, Vercel Pro hoặc hosting trong nước (nếu khách cần hoá đơn VAT). Tên miền chưa chốt.
 

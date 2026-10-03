@@ -35,8 +35,33 @@ export const ytThumb = (id: string, size: 'maxresdefault' | 'hqdefault' = 'maxre
 export const ALBUM_URL = 'https://vbcsd.vn/album.asp'
 export const FACEBOOK_URL = 'https://www.facebook.com/VBC4SD/'
 export const YOUTUBE_CHANNEL_URL = 'https://www.youtube.com/@hoiongdoanhnghiepvisuphatt244'
-/** All documents currently point to one shared folder (individual PDFs pending). */
-export const DOCUMENTS_URL = 'https://drive.google.com/drive/folders/1AkbTogZPtPyeqUJ2xS4y3OYYRG3D-UqR'
+export interface Doc {
+  title: Record<Locale, string>
+  /** Google Drive file id of each language version. */
+  file: Record<Locale, string>
+  /** File type shown on the badge. */
+  type: string
+}
+
+/** Language name shown next to the badge, always in that file's own language. */
+export const DOC_LANG: Record<Locale, string> = { vi: 'Tiếng Việt', en: 'English' }
+
+/** Opens Drive's preview page (has its own download button; works on phones). */
+export const docUrl = (id: string) => `https://drive.google.com/file/d/${id}/view`
+
+// Source: https://drive.google.com/drive/folders/1QoZ4zySgcxs5lRSOM29DeUmA029Uk0OW
+export const DOCUMENTS: Doc[] = [
+  {
+    title: { vi: 'Chương trình dự kiến', en: 'Tentative agenda' },
+    file: { vi: '1k0SiMbNLGvSDd_FDBs5BQMVMDOgfmM-O', en: '18OS0-rjvwdEq6EBsMnTDwxHv52MrIDdU' },
+    type: 'DOCX',
+  },
+  {
+    title: { vi: 'Chương trình dự kiến – Phiên chuyên đề', en: 'Tentative agenda – Thematic session' },
+    file: { vi: '15YwzY683_fmV2Gm0mg4Ic9faxVwQhXuY', en: '15pKco1FfpOvgTqJA0xrreNSR1G6f0-P3' },
+    type: 'DOCX',
+  },
+]
 
 export interface Photo {
   src: string

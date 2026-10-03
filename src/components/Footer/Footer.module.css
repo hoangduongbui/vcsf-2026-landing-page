@@ -144,26 +144,46 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.devInner {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
+.devInner > span {
+  white-space: nowrap;
+}
+
+/* width: 0 + min-width: 100% keeps the logos out of the width calculation, so the
+   row takes the text line's width: first logo flush left, second flush right. */
 .devLogos {
+  width: 0;
+  min-width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 28px;
 }
 
+/* Both logos shrink by the same ratio when the text line is the narrower one */
 .devLogos a {
   display: block;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .devLogos img {
-  height: 24px;
+  height: auto;
   width: auto;
+  max-width: 100%;
+  max-height: 24px;
   display: block;
 }
 
 .devRule {
+  flex: none;
   width: 1px;
   height: 28px;
   background: rgba(255, 255, 255, .2);

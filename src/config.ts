@@ -3,8 +3,20 @@
 /** 'auto' = live between LIVE.start and LIVE.end; 'on' / 'off' force it. */
 export const LIVE_MODE: 'auto' | 'on' | 'off' = 'auto'
 
-/** YouTube URL or id of the live stream. Empty = "coming soon" placeholder. */
-export const LIVE_URL = ''
+/**
+ * YouTube URL or id of the announced live stream — shown as soon as the box appears.
+ * Empty = only the channel below is used: "coming soon" poster until it really plays
+ * (see LIVE.catchEnd).
+ */
+export const LIVE_URL: string = 'https://www.youtube.com/watch?v=ym_Euj7W8CM'
+
+/**
+ * Channel id (UC…) of the VBCSD YouTube channel, @hoiongdoanhnghiepvisuphatt244.
+ * Plan B for LIVE_URL: the box switches to whatever this channel is broadcasting
+ * when LIVE_URL breaks, or when the channel goes live while LIVE_URL still hasn't
+ * started (i.e. they moved to another link). '' turns this off.
+ */
+export const LIVE_CHANNEL_ID = 'UCfMzGX7gxfZYVa9nAQHjgmA'
 
 /** 'full' | 'subtle' | 'off'. prefers-reduced-motion always forces 'off'. */
 export const MOTION: 'full' | 'subtle' | 'off' = 'full'

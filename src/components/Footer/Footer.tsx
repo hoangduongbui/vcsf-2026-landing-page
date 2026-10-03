@@ -80,16 +80,19 @@ export default function Footer() {
             {t.council}
           </p>
           <div className={styles.dev}>
-            <span>{t.developed}</span>
-            <div className={styles.devLogos}>
-              {/* File names may be swapped (see handoff README) — placed as in the design */}
-              <a href={HEMERA_URL} target="_blank" rel="noopener noreferrer">
-                <img src={asset('images/hemera-media.png')} alt="Hemera Media" />
-              </a>
-              <span className={styles.devRule} />
-              <a href={HEMERA_URL} target="_blank" rel="noopener noreferrer">
-                <img src={asset('images/hemera-tech.png')} alt="Hemera Tech" />
-              </a>
+            {/* As wide as the text line; the logo row is fitted to that width */}
+            <div className={styles.devInner}>
+              <span>{t.developed}</span>
+              <div className={styles.devLogos}>
+                {/* File names may be swapped (see handoff README) — placed as in the design */}
+                <a href={HEMERA_URL} target="_blank" rel="noopener noreferrer">
+                  <img src={asset('images/hemera-media.png')} alt="Hemera Media" />
+                </a>
+                <span className={styles.devRule} />
+                <a href={HEMERA_URL} target="_blank" rel="noopener noreferrer">
+                  <img src={asset('images/hemera-tech.png')} alt="Hemera Tech" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
