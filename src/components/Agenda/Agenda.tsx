@@ -136,8 +136,29 @@ export default function Agenda() {
                 ) : (
                   <div className={`${styles.row} ${narrow ? styles.rowNarrow : ''}`}>
                     <span className={styles.time}>{r[0]}</span>
-                    <span className={styles.act}>{r[1]}</span>
-                    <span className={styles.spk}>{r[2]}</span>
+                    <span className={styles.act}>
+                      {r[1].split('\n').map((line, j) => (
+                        <span key={j} className={styles.actLine}>
+                          {line}
+                        </span>
+                      ))}
+                    </span>
+                    <span className={styles.spk}>
+                      {r[2].split('\n').map((line, j) => {
+                        // "1. …" / "- …" lines are list items: marker + hanging indent.
+                        const m = /^(\d+\.|-)\s+(.*)$/.exec(line)
+                        return m ? (
+                          <span key={j} className={styles.spkItem}>
+                            <span>{m[1]}</span>
+                            <span>{m[2]}</span>
+                          </span>
+                        ) : (
+                          <span key={j} className={styles.spkLine}>
+                            {line}
+                          </span>
+                        )
+                      })}
+                    </span>
                   </div>
                 )}
               </div>

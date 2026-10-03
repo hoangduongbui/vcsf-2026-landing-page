@@ -61,8 +61,9 @@ Chạy, build, deploy và bảng "sửa nội dung ở đâu": xem `README.md`.
 
 - Dải ảnh Thư viện: 10 ảnh lấy từ album vbcsd.vn (2025→2021, mỗi năm 2 ảnh, chỉ rộng 500px; có ảnh gốc nét hơn thì thay trong `public/images/gallery/`). Còn chờ: id video 2026.
 - Xác nhận file logo nào là Hemera Media, file nào là Hemera Tech.
-- Giờ kết thúc buổi chiều: agenda tổng thể VI ghi 15h45 + bốc thăm 15h45–16h00; EN ghi 16h30; chương trình chi tiết phiên chuyên đề kết thúc 16h20. Mục Giới thiệu đang theo agenda tổng thể (VI 16:00, EN 16:30). Box Live từ 03/10 theo bản design mới: "8:00 – 17:00", "Khách sạn Sheraton Hanoi West Lake, Hà Nội" (bản EN tự dịch, chưa có design), nên đang lệch với mục Giới thiệu.
-- Đã xoá PTT Hồ Quốc Dũng khỏi danh sách diễn giả vì không có ảnh (yêu cầu 02/10); còn 27 diễn giả, đều có ảnh. 8 người chưa có bio (Hồ Sỹ Hùng, Nguyễn Xuân Thắng, Bùi Văn Khắng, Binu Jacob, James Crampton, Lê Hoàng Minh, Nguyễn Quang Vinh, Hà Thu Thanh); ảnh Bùi Văn Khắng độ phân giải thấp (gốc 300×400); 2 bài trình bày Phần 1 phiên chuyên đề chưa có tên.
+- Agenda cập nhật 03/10 theo 4 file DOCX trên Drive (bản v29.9 / 20260930): nội dung `agenda.ts` giờ lấy theo các file này, không còn theo design. Bà Hà Thu Thanh không còn trong agenda (ông Nguyễn Quang Vinh khai mạc phiên chuyên đề) nhưng vẫn ở mục Diễn giả, chờ quyết. Chức danh ở mục Diễn giả chưa đồng bộ theo agenda mới (chủ dự án chọn chỉ sửa agenda).
+- Giờ kết thúc buổi chiều: agenda tổng thể VI và EN đều ghi 16h30 (đã bỏ bốc thăm); chương trình chi tiết phiên chuyên đề kết thúc 16h20. Mục Giới thiệu theo agenda tổng thể (VI và EN đều 16:30). Box Live từ 03/10 theo bản design mới: "8:00 – 17:00", "Khách sạn Sheraton Hanoi West Lake, Hà Nội" (bản EN tự dịch, chưa có design), nên đang lệch với mục Giới thiệu.
+- Đã xoá PTT Hồ Quốc Dũng khỏi danh sách diễn giả vì không có ảnh (yêu cầu 02/10); còn 27 diễn giả, đều có ảnh. 8 người chưa có bio (Hồ Sỹ Hùng, Nguyễn Xuân Thắng, Bùi Văn Khắng, Binu Jacob, James Crampton, Lê Hoàng Minh, Nguyễn Quang Vinh, Hà Thu Thanh); ảnh Bùi Văn Khắng độ phân giải thấp (gốc 300×400).
 - Deploy: tạm dùng Vercel (gói Hobby, chỉ để gửi link xem thử). Chạy thật dự kiến dùng Cloudflare Pages, Vercel Pro hoặc hosting trong nước (nếu khách cần hoá đơn VAT). Tên miền chưa chốt.
 
 ## Môi trường

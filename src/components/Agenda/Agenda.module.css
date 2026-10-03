@@ -224,9 +224,33 @@
   text-wrap: pretty;
 }
 
+/* Several activities sharing one time slot (merged time cell in the source). */
+.actLine {
+  display: block;
+}
+
+.actLine + .actLine {
+  margin-top: 10px;
+}
+
 .spk {
   font: 400 14px/1.55 var(--font-body);
   color: var(--on-dark-muted);
   text-wrap: pretty;
-  white-space: pre-line;
+}
+
+.spkLine {
+  display: block;
+}
+
+/* Numbered / dashed speaker lists: marker column + hanging indent. */
+.spkItem {
+  display: grid;
+  grid-template-columns: 1.3em 1fr;
+  column-gap: 2px;
+  padding-left: 6px;
+}
+
+.spkItem > span:first-child {
+  font-variant-numeric: tabular-nums;
 }

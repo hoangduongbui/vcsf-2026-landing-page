@@ -28,7 +28,7 @@ export const L = {
     aboutParagraphs: [
       'Được tổ chức thường niên từ năm 2014 bởi Liên đoàn Thương mại và Công nghiệp Việt Nam (VCCI) thông qua đầu mối là Hội đồng Doanh nghiệp vì sự phát triển bền vững Việt Nam (VBCSD), Diễn đàn Doanh nghiệp Phát triển Bền vững Việt Nam (VCSF) là sự kiện trao đổi, đối thoại hiệu quả giữa các cơ quan quản lý nhà nước, các tổ chức đối tác trong nước, quốc tế và cộng đồng doanh nghiệp về các định hướng và thực tiễn phát triển bền vững.',
       'Trải qua hơn 10 năm tổ chức, VCSF đã luôn nhận được sự quan tâm, đánh giá cao của lãnh đạo Đảng, Nhà nước, thu hút sự tham gia của đại diện các cơ quan, tổ chức trong nước và quốc tế cùng đông đảo cộng đồng doanh nghiệp. Các kỳ Diễn đàn VCSF đã đóng góp nhiều kiến nghị có giá trị, làm đầu vào cho các chính sách quan trọng về thúc đẩy phát triển bền vững doanh nghiệp đã được Chính phủ ban hành trong những năm qua.',
-      'Năm 2026, Diễn đàn VCSF với chủ đề “Tăng trưởng bứt phá – Phát triển bền vững: Hai mục tiêu, một hành trình” sẽ được tổ chức vào:\nThời gian: 7:45 – 16:00 ngày 05 tháng 10 năm 2026 (thứ Hai)\nĐịa điểm: Phòng Sông Hồng, Khách sạn Sheraton Hà Nội',
+      'Năm 2026, Diễn đàn VCSF với chủ đề “Tăng trưởng bứt phá – Phát triển bền vững: Hai mục tiêu, một hành trình” sẽ được tổ chức vào:\nThời gian: 7:45 – 16:30 ngày 05 tháng 10 năm 2026 (thứ Hai)\nĐịa điểm: Phòng Sông Hồng, Khách sạn Sheraton Hà Nội',
       '',
     ],
     aboutImageAlt: 'Minh họa ý niệm về không gian diễn đàn và kiến trúc bền vững', aboutImageNote: 'Hình minh họa ý niệm · VCSF 2026',
